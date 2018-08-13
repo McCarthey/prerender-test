@@ -94,10 +94,8 @@
 				if (this.cur >= this.imgs.length) return
 				if (type === 'out') {
 					console.log('out', this.cur)
-					this.$reporter.event({category: 'vouchh5_out', action: 'not set', label: this.imgs[this.cur].name })
 				} else if (type === 'in') {
 					console.log('in', this.cur)
-					this.$reporter.event({category: 'vouchh5_in', action: 'not set', label: this.imgs[this.cur].name })
 				}
 				// 记录当前操作 并显示一定时间 再轮播至下一个
 				this.imgs[this.cur].op = type

@@ -5,7 +5,9 @@
 			<img src="../../assets/imgs/avatar-group.png" alt="vote now">
 			<p class="des">You decide who can get IN</p>
 		</div>
-		<button id="btn-click" class="icon-button" @click="download">Join Now!</button>
+		<a href="https://itunes.apple.com/US/app/id873518909?mt=8">
+			<button id="btn-click" class="icon-button">Join Now!</button>
+		</a>
 	</div>
 </template>
 
@@ -14,16 +16,6 @@
 
 	export default {
 		name: 'card',
-		methods: {
-			download() {
-				this.$reporter.event({category: 'clickdownload_vouchh5', action: 'not set', label: 'not set'})
-				Indicator.open()
-				window.location.href = 'https://itunes.apple.com/US/app/id873518909?mt=8'
-			}
-		},
-		mounted() {
-			this.$reporter.event({category: 'arrive_vouchh5', action: 'not set', label: 'not set'})
-		}
 	}
 </script>
 
@@ -80,6 +72,9 @@
 	            top: -50px;
 	        }
 	    }
+		a {
+			display: block;
+		}
 	    .icon-button {
 	        position: relative;
 	        width: 150px;
@@ -87,7 +82,7 @@
 	        text-align: left;
 	        padding-left: 26px;
 	        font-size: 16px;
-	        top: -20px;
+	        top: 0;
 	        background: url(../../assets/imgs/icon-button.png) no-repeat 100% / cover;
 	    }
 	}

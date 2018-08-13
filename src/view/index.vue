@@ -11,9 +11,6 @@
         name: 'fb_ad1',
         components: {
             swiper,
-        },
-        mounted() {
-            this.$reporter.event({category: 'open_vouchh5', action: 'not set', label: 'not set'})
         }
     }
 </script>
