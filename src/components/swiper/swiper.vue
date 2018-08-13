@@ -171,7 +171,8 @@
 	                    padding: 10px;
 	                    color: #fff;
 	                    // font-weight: bold;
-	                    text-align: center;
+						text-align: center;
+						box-sizing: border-box;
 	                }
 	                .little-circle-out {
 	                    background-color: #c23138;
