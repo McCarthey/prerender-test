@@ -18,6 +18,7 @@
   }
   button {
     border: none;
+    outline: none;
   }
   p {
     margin: 0;
