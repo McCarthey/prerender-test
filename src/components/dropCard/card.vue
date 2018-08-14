@@ -72,9 +72,9 @@
 	            top: -50px;
 	        }
 	    }
-		a {
-			display: block;
-		}
+	    a {
+	        display: block;
+	    }
 	    .icon-button {
 	        position: relative;
 	        width: 150px;

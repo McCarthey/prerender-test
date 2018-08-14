@@ -19,7 +19,7 @@
     $primaryColor: #d1ae82;
     .fb-ad-page {
         height: 100vh;
-        background: url(../assets/imgs/bg.png) no-repeat 100% / cover;
+        background: url(../assets/imgs/bg.png) no-repeat 100% 100% / cover;
         color: $primaryColor;
     }
 </style>

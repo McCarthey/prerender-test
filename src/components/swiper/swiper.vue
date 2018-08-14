@@ -92,11 +92,11 @@
 			async btnClick(type) {
 				// 如果cur大于图片数组长度 按钮置灰
 				if (this.cur >= this.imgs.length) return
-				if (type === 'out') {
-					console.log('out', this.cur)
-				} else if (type === 'in') {
-					console.log('in', this.cur)
-				}
+				// if (type === 'out') {
+				// 	console.log('out', this.cur)
+				// } else if (type === 'in') {
+				// 	console.log('in', this.cur)
+				// }
 				// 记录当前操作 并显示一定时间 再轮播至下一个
 				this.imgs[this.cur].op = type
 				await setTimeout(() => {
@@ -111,6 +111,22 @@
 		},
 		components: {
 			card
+		},
+		watch: {
+			cardShow(val) {
+				const timer = setInterval(() => {
+					try {
+						const btnClick = document.querySelector('#btn-click')
+						btnClick.addEventListener('click', () => {
+							FbPlayableAd.onCTAClick()
+						})
+						console.log('ok')
+						clearInterval(timer)
+					} catch (e) {
+						console.log('try again', e)
+					}
+				}, 500)
+			}
 		}
 	}
 </script>
@@ -158,7 +174,7 @@
 	                    z-index: 10;
 	                    filter: blur(0px);
 	                    opacity: 1;
-						box-sizing: border-box;
+	                    box-sizing: border-box;
 	                    border: 1px solid #999;
 	                }
 	                $circleSize: 54px;
@@ -171,8 +187,8 @@
 	                    padding: 10px;
 	                    color: #fff;
 	                    // font-weight: bold;
-						text-align: center;
-						box-sizing: border-box;
+	                    text-align: center;
+	                    box-sizing: border-box;
 	                }
 	                .little-circle-out {
 	                    background-color: #c23138;
