@@ -228,6 +228,8 @@
 	    .text-profile {
 	        color: #d4d4d4;
 	        text-align: center;
+			position: relative;
+			top: -40px;
 	        .name {
 	            font-size: 24px;
 	        }
